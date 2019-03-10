@@ -66,13 +66,10 @@ before_deploy:
   - cross build --target $TARGET --release
   - bin=$NAME
   - if [[ $TARGET = "x86_64-pc-windows-gnu" ]]; then bin=$NAME.exe; fi
+  - openssl dgst -sha256 $bin
   - tar czf $NAME-$TRAVIS_TAG-$TARGET.tar.gz -C target/$TARGET/release $bin
 
 deploy:
-  # TODO update `api_key.secure`
-  # - Create a `public_repo` GitHub token. Go to: https://github.com/settings/tokens/new
-  # - Encrypt it: `travis encrypt 0123456789012345678901234567890123456789
-  # - Paste the output down here
   api_key:
     secure: Cwjrt+auxJ0gcNmPKWp6zMrQI5m3bgPJSkUJ4z2D8UROSIeS8aoXpeMT0OyDVdfM720q11cyp2VKd0UhMbGnQ2luPgGnlPyCmSsJ8RFIF0buIQ1rIosgNhHIUBlRl5v+M94Myr29pIuq0sT+oVAu+LsykqDuH0yBRQPV3Qp5ZZ1USLnrGFHBV0OvSDSiZzGjXA0lKOJGBfH6QKphsTAzt+r9+ASBHLd+0Ywq7DDZ8dlOSfSNnyyvDfLGYSNxr23KyMzQyXt/Z+kg4aWvIbtxUBFjORZ1Oef4EuWSZ3qdnkaPiTc+Vz3t766AgrGGIj53Mi06+Lkb2cxML8VaiKT20t3YBHD1IRwKGlljEPsP0llhBRlX6SbxUTuoDifJSqqzDeC+AlWUytANY9vpIKEr0otmpxeJ67M7Kxq/eFEyzokpvNTxjnhwDMKlzZqJxhaVlne6UrwUCIeOtd92s0GToEcth4iS+lDkWl1KUHw1h9/TY5QhuMQtCPvoopmOn7UTJcFTJqhTKD2RyxrIjn3Sw3k1y8KhyIvvPn27lw6uWDcMCcfiZInH00O9db2ACN2mw8pWDEBU62YHXoAzQO2EhVqQhgK0UXfqeAHtTf0EdGysBh6dPVWi4IXqeGLf5f6d/gyngL/jnWSm4uC+vswaQN2xRhDw84shrtFMbQhQmeg=
   file_glob: true
