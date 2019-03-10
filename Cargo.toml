@@ -1,0 +1,12 @@
+[package]
+name = "lineemoji_dl"
+version = "0.1.0"
+authors = ["laprasdrum <laprasdrum@yuyacat.com>"]
+edition = "2018"
+
+[dependencies]
+regex = "*"
+reqwest = "*"
+structopt = "*"
+pretty_env_logger = "*"
+failure = "*"
