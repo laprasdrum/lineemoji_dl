@@ -1,6 +1,6 @@
 [package]
 name = "lineemoji_dl"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["laprasdrum <laprasdrum@yuyacat.com>"]
 edition = "2018"
 
