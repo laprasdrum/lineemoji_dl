@@ -1,4 +1,4 @@
-class LineEmojiDL < Formula
+class LineemojiDl < Formula
   version 'v1.0.2'
   desc "download line emoji from url"
   homepage "https://github.com/laprasdrum/lineemoji_dl"
