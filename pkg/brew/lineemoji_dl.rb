@@ -5,10 +5,10 @@ class LineemojiDl < Formula
 
   if OS.mac?
       url "https://github.com/laprasdrum/lineemoji_dl/releases/download/#{version}/lineemoji_dl-#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "53c643eb8b2ff9fe7ea7056168710d11d4e157c4fc2c06a24249a0590515d6c4"
+      sha256 "6e9ef3b5d072198f4acd79b74b858c26732604a77fd03cb3532f9e1dfc51afa6"
   elsif OS.linux?
       url "https://github.com/laprasdrum/lineemoji_dl/releases/download/#{version}/lineemoji_dl-#{version}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "5eb6aff872f4e0934491ef0467fe902bd73e25c580921667e4dab28f5a170db5"
+      sha256 "6d5c20fb2e53b636ec8153ce88925e02de2f38ea26e4ee9e849dc1ba858a67cd"
   end
 
   def install
