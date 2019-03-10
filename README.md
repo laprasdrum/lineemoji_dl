@@ -1,5 +1,7 @@
 # lineemoji_dl
 
+![travis](https://travis-ci.com/laprasdrum/lineemoji_dl.svg?branch=master)
+
 ## usage
 
 ```sh
